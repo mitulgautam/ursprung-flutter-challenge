@@ -1,12 +1,9 @@
 import 'package:farixo/pages/new_member.dart';
 import 'package:farixo/pages/chat_screen.dart';
 import 'package:farixo/pages/notifications.dart';
-import 'package:farixo/pages/professional_member.dart';
 import 'package:farixo/pages/profile.dart';
 import 'package:flutter/material.dart';
-
 import 'JobHome.dart';
-import 'jobsuggestion.dart';
 
 class ChatUI extends StatefulWidget {
   @override

@@ -27,6 +27,14 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+   
+  flutter_launcher_icons:
+
+flutter_icons:
+  image_path_android: "assets/icon.jpeg"
+  image_path_ios: "assets/icon.jpeg"
+  android: true 
+  ios: true 
 
 
 # For information on the generic Dart part of this file, see the
@@ -43,7 +51,9 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
    - assets/profile.jfif
-  #  - images/a_dot_ham.jpeg
+   - assets/splashscreen.png
+   - assets/icon.jpeg
+   
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
