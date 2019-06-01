@@ -20,7 +20,7 @@ class _JobState extends State<Job> {
             height: 8.0,
           ),
           Text(
-            'Suggestion based on your choice.',
+            'Job suggestion based on your choice.',
             style: TextStyle(
                 fontFamily: 'Quicksand',
                 fontWeight: FontWeight.bold,
