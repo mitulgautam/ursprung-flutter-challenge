@@ -4,6 +4,7 @@ import 'package:farixo/pages/notifications.dart';
 import 'package:farixo/pages/profile.dart';
 import 'package:flutter/material.dart';
 import 'JobHome.dart';
+import 'jobsuggestion.dart';
 
 var jobSelected = true;
 
