@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'JobHome.dart';
+
 class JobSuggestion extends StatefulWidget {
   @override
   _JobSuggestionState createState() => _JobSuggestionState();
@@ -52,7 +54,10 @@ class _JobSuggestionState extends State<JobSuggestion> {
           ),
           MaterialButton(
             height: 48.0,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(new MaterialPageRoute(
+                  builder: (BuildContext context) => new Job()));
+            },
             color: Colors.white,
             elevation: 8.0,
             splashColor: Colors.purple,

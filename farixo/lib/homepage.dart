@@ -5,6 +5,9 @@ import 'package:farixo/pages/professional_member.dart';
 import 'package:farixo/pages/profile.dart';
 import 'package:flutter/material.dart';
 
+import 'JobHome.dart';
+import 'jobsuggestion.dart';
+
 class ChatUI extends StatefulWidget {
   @override
   _ChatUIState createState() => _ChatUIState();
@@ -27,7 +30,7 @@ class _ChatUIState extends State<ChatUI> with SingleTickerProviderStateMixin {
           appBar: new PreferredSize(
             preferredSize: Size.fromHeight(kToolbarHeight),
             child: new Container(
-              color: Colors.blueGrey,
+              color: Colors.black,
               child: new SafeArea(
                 child: Column(
                   children: <Widget>[
@@ -35,7 +38,7 @@ class _ChatUIState extends State<ChatUI> with SingleTickerProviderStateMixin {
                     new TabBar(
                       tabs: <Widget>[
                         new Tab(icon: new Icon(Icons.person_add)),
-                        new Tab(icon: new Icon(Icons.group)),
+                        new Tab(icon: new Icon(Icons.work)),
                         new Tab(icon: new Icon(Icons.message)),
                         new Tab(icon: new Icon(Icons.notifications)),
                         new Tab(icon: new Icon(Icons.person_pin))
@@ -50,7 +53,7 @@ class _ChatUIState extends State<ChatUI> with SingleTickerProviderStateMixin {
             controller: _tabController,
             children: <Widget>[
               new Newmember(),
-              new Professional(),
+              Job(),
               new ChatScreen(),
               new Notifications(),
               new Profile(),
