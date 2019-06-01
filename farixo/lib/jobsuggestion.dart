@@ -53,7 +53,7 @@ class _JobSuggestionState extends State<JobSuggestion> {
         padding: EdgeInsets.all(16.0),
         child: Text(
           text,
-          style: TextStyle(fontSize: 24.0,color: Colors.white),
+          style: TextStyle(fontSize: 24.0,color: Colors.white,fontFamily: 'Quicksand'),
         ),
         decoration: BoxDecoration(
           color: color,
