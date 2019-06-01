@@ -50,7 +50,7 @@ class _JobState extends State<Job> {
       String jobTitle, String location, IconData icon, String company) {
     return Card(
       margin: EdgeInsets.only(left: 16.0, right: 16.0,top: 16.0),
-      child: Container(
+      child: Container(padding: EdgeInsets.all(8.0),
         child: Row(
           children: <Widget>[
             Column(
