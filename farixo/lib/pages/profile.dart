@@ -21,7 +21,8 @@ class Profile extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: Colors.red,
                         image: DecorationImage(
-                            image: AssetImage('assets/profile.png'),
+                            image: AssetImage(
+                                'assets/profile.jfif'),
                             fit: BoxFit.cover),
                         borderRadius: BorderRadius.all(Radius.circular(75.0)),
                         boxShadow: [
@@ -29,7 +30,7 @@ class Profile extends StatelessWidget {
                         ])),
                 SizedBox(height: 60.0),
                 Text(
-                  'AEO Logic',
+                  'Android Bot',
                   style: TextStyle(
                     fontSize: 30.0,
                     fontWeight: FontWeight.bold,
