@@ -18,14 +18,14 @@ class _ChatUIState extends State<ChatUI> with SingleTickerProviderStateMixin {
 
   void initState() {
     super.initState();
-    _tabController = new TabController(vsync: this, initialIndex: 2, length: 5);
+    _tabController = new TabController(vsync: this, initialIndex: 2, length: 4);
   }
 
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
       home: new DefaultTabController(
-        length: 5,
+        length: 4,
         child: new Scaffold(
           appBar: new PreferredSize(
             preferredSize: Size.fromHeight(kToolbarHeight),
@@ -37,7 +37,6 @@ class _ChatUIState extends State<ChatUI> with SingleTickerProviderStateMixin {
                     new Expanded(child: new Container()),
                     new TabBar(
                       tabs: <Widget>[
-                        new Tab(icon: new Icon(Icons.person_add)),
                         new Tab(icon: new Icon(Icons.work)),
                         new Tab(icon: new Icon(Icons.message)),
                         new Tab(icon: new Icon(Icons.notifications)),
@@ -50,9 +49,7 @@ class _ChatUIState extends State<ChatUI> with SingleTickerProviderStateMixin {
             ),
           ),
           body: new TabBarView(
-            controller: _tabController,
-            children: <Widget>[
-              new Newmember(),
+            children: [
               _jub(),
               new ChatScreen(),
               new Notifications(),
