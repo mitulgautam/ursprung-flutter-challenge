@@ -16,7 +16,7 @@ class _ChatUIState extends State<ChatUI> with SingleTickerProviderStateMixin{
 
   void initState(){
     super.initState();
-    _tabController = new TabController(vsync: this,initialIndex:1,length:4);
+    _tabController = new TabController(vsync: this,initialIndex:1,length:5);
   }
 
 
@@ -24,7 +24,6 @@ class _ChatUIState extends State<ChatUI> with SingleTickerProviderStateMixin{
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("To be decided"),
         elevation: 0.7,
         bottom: new TabBar(
           controller: _tabController,
@@ -38,14 +37,7 @@ class _ChatUIState extends State<ChatUI> with SingleTickerProviderStateMixin{
           ],
 
         ),
-        actions: <Widget>[
-          new Icon(Icons.search),
-          new Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 5.0),
-          ),
-          new Icon(Icons.more_vert)
-        ],
-
+        
       ),
       body:new TabBarView(
         controller: _tabController,
@@ -57,12 +49,6 @@ class _ChatUIState extends State<ChatUI> with SingleTickerProviderStateMixin{
           new Profile(),
           
           ],
-      ),
-      floatingActionButton: new FloatingActionButton(
-        backgroundColor: Colors.red,
-        child: new Icon(Icons.message,
-        color: Colors.white),
-        onPressed: () => print("Open Chats"),
       ),
     );
   }
