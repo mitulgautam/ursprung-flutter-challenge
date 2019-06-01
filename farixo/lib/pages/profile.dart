@@ -21,8 +21,7 @@ class Profile extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: Colors.red,
                         image: DecorationImage(
-                            image: AssetImage(
-                                'assets/profile.png'),
+                            image: AssetImage('assets/profile.png'),
                             fit: BoxFit.cover),
                         borderRadius: BorderRadius.all(Radius.circular(75.0)),
                         boxShadow: [
@@ -30,14 +29,13 @@ class Profile extends StatelessWidget {
                         ])),
                 SizedBox(height: 60.0),
                 Text(
-                  'Your name',
+                  'AEO Logic',
                   style: TextStyle(
-                      fontSize: 30.0,
-                      fontWeight: FontWeight.bold,
-                      ),
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 SizedBox(height: 15.0),
-                
                 Container(
                     height: 30.0,
                     width: 95.0,
@@ -51,15 +49,16 @@ class Profile extends StatelessWidget {
                         child: Center(
                           child: Text(
                             'Edit Name',
-                            style: TextStyle(color: Colors.white, fontFamily: 'Montserrat'),
+                            style: TextStyle(
+                                color: Colors.white, fontFamily: 'Montserrat'),
                           ),
                         ),
                       ),
                     )),
-                    SizedBox(height: 25.0),
+                SizedBox(height: 25.0),
                 Container(
-                    height: 30.0,
-                    width: 95.0,
+                    width: 128.0,
+                    padding: EdgeInsets.all(16.0),
                     child: Material(
                       borderRadius: BorderRadius.circular(20.0),
                       shadowColor: Colors.redAccent,
@@ -70,7 +69,10 @@ class Profile extends StatelessWidget {
                         child: Center(
                           child: Text(
                             'Log out',
-                            style: TextStyle(color: Colors.white, fontFamily: 'Montserrat'),
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Montserrat',
+                                fontSize: 24.0),
                           ),
                         ),
                       ),
