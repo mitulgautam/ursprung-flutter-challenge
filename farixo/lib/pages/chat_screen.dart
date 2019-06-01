@@ -1,6 +1,8 @@
 import 'package:farixo/models/chat_model.dart';
 import 'package:flutter/material.dart';
 
+import '../chat.dart';
+
 class ChatScreen extends StatefulWidget {
   @override
   ChatScreenState createState() {
@@ -18,8 +20,12 @@ class ChatScreenState extends State<ChatScreen> {
               new Divider(
                 height: 10.0,
               ),
-              InkWell(splashColor: Colors.green,
-                onTap: () {},
+              InkWell(
+                splashColor: Colors.green,
+                onTap: () {
+                  Navigator.of(context).push(
+                      new MaterialPageRoute(builder: (context) => Chat()));
+                },
                 child: new ListTile(
                   leading: new CircleAvatar(
                     foregroundColor: Theme.of(context).primaryColor,
