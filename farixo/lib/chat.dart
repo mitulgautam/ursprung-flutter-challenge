@@ -80,8 +80,8 @@ class _ChatState extends State<Chat> {
 
     return Scaffold(
       resizeToAvoidBottomPadding: true,
-      appBar: AppBar(
-        title: Text("Chat Bubbles"),
+      appBar: AppBar(backgroundColor: Colors.green,
+        title: Text("Ferixo"),
       ),
       body: Column(
         children: <Widget>[

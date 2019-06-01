@@ -15,17 +15,12 @@ class ChatUI extends StatefulWidget {
 }
 
 class _ChatUIState extends State<ChatUI> with SingleTickerProviderStateMixin {
-  TabController _tabController;
 
-  void initState() {
-    super.initState();
-    _tabController = new TabController(vsync: this, initialIndex: 2, length: 4);
-  }
 
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      home: new DefaultTabController(
+      home: new DefaultTabController(initialIndex: 1,
         length: 4,
         child: new Scaffold(
           appBar: new PreferredSize(

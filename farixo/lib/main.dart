@@ -101,6 +101,7 @@ class _LoginPageState extends State<LoginPage>
   String _email = "";
   String _password = "";
   FormType _form = FormType.login;
+
   @override
   void initState() {
     super.initState();
