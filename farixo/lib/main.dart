@@ -13,7 +13,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Home(),
-      title: 'Ursprung',
+      title: 'Ursprung-AEO',
     );
   }
 }
