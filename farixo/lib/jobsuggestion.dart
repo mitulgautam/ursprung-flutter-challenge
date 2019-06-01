@@ -28,7 +28,7 @@ class _JobSuggestionState extends State<JobSuggestion> {
             children: <Widget>[
               _bubble('Flutter Developer', Colors.orange),
               _bubble('Pyhton', Colors.blue),
-              _bubble('Dart', Colors.yellow),
+              _bubble('Dart', Colors.amber),
             ],
           ),
           Row(
@@ -38,26 +38,76 @@ class _JobSuggestionState extends State<JobSuggestion> {
               _bubble('Java Developer', Colors.pink),
             ],
           ),
+          Container(
+            child: Text(
+              '$selected',
+              style: TextStyle(
+                  fontFamily: 'Quicksand',
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
+            ),
+          ),
+          Container(
+            height: 64.0,
+          ),
+          MaterialButton(
+            height: 48.0,
+            onPressed: () {},
+            color: Colors.white,
+            elevation: 8.0,
+            splashColor: Colors.purple,
+            child: Text(
+              'Continue',
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black54,
+                  fontSize: 16.0),
+            ),
+          ),
         ],
       ),
     );
   }
 
+  var selected = [];
+
   Widget _bubble(String text, Color color) {
+    var h = 60.0;
     return Card(
       color: Colors.black,
       elevation: 8.0,
-      child: Container(
-        margin: EdgeInsets.only(left: 4.0, top: 8.0),
-        height: 64.0,
-        padding: EdgeInsets.all(16.0),
-        child: Text(
-          text,
-          style: TextStyle(fontSize: 24.0,color: Colors.white,fontFamily: 'Quicksand'),
-        ),
-        decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(24.0),
+      child: InkWell(
+        onTap: () {
+          if (selected.contains(text) == true) {
+            selected.remove(text);
+            setState(() {
+              h = 60.0;
+            });
+          } else {
+            selected.add(text);
+            setState(() {
+              h = 64.0;
+            });
+          }
+          print(h);
+          print(selected);
+        },
+        child: Container(
+          margin: EdgeInsets.only(left: 4.0, top: 8.0),
+          height: h,
+          padding: EdgeInsets.all(16.0),
+          child: Text(
+            text,
+            style: TextStyle(
+                fontSize: 20.0,
+                color: Colors.white,
+                fontFamily: 'Quicksand',
+                fontWeight: FontWeight.bold),
+          ),
+          decoration: BoxDecoration(
+            color: color,
+            borderRadius: BorderRadius.circular(24.0),
+          ),
         ),
       ),
     );
