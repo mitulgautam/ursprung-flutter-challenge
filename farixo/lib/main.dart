@@ -15,6 +15,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: ChatUI(),
       title: 'Ursprung-AEO',
+      debugShowCheckedModeBanner: false,
     );
   }
 }

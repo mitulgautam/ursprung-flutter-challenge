@@ -10,45 +10,53 @@ class ChatUI extends StatefulWidget {
   _ChatUIState createState() => _ChatUIState();
 }
 
-class _ChatUIState extends State<ChatUI> with SingleTickerProviderStateMixin{
-
+class _ChatUIState extends State<ChatUI> with SingleTickerProviderStateMixin {
   TabController _tabController;
 
-  void initState(){
+  void initState() {
     super.initState();
-    _tabController = new TabController(vsync: this,initialIndex:1,length:5);
+    _tabController = new TabController(vsync: this, initialIndex: 1, length: 5);
   }
-
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        elevation: 0.7,
-        bottom: new TabBar(
-          controller: _tabController,
-          indicatorColor: Colors.white,
-          tabs: <Widget>[
-            new Tab(icon : new Icon(Icons.person_add)), 
-            new Tab(icon : new Icon(Icons.group)),
-            new Tab(icon : new Icon(Icons.message)),
-            new Tab(icon : new Icon(Icons.notifications)),
-            new Tab(icon : new Icon(Icons.person_pin))
-          ],
-
+    return new MaterialApp(
+      home: new DefaultTabController(
+        length: 5,
+        child: new Scaffold(
+          appBar: new PreferredSize(
+            preferredSize: Size.fromHeight(kToolbarHeight),
+            child: new Container(
+              color: Colors.blueGrey,
+              child: new SafeArea(
+                child: Column(
+                  children: <Widget>[
+                    new Expanded(child: new Container()),
+                    new TabBar(
+                      tabs: <Widget>[
+                        new Tab(icon: new Icon(Icons.person_add)),
+                        new Tab(icon: new Icon(Icons.group)),
+                        new Tab(icon: new Icon(Icons.message)),
+                        new Tab(icon: new Icon(Icons.notifications)),
+                        new Tab(icon: new Icon(Icons.person_pin))
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          body: new TabBarView(
+            controller: _tabController,
+            children: <Widget>[
+              new Newmember(),
+              new Professional(),
+              new ChatScreen(),
+              new Notifications(),
+              new Profile(),
+            ],
+          ),
         ),
-        
-      ),
-      body:new TabBarView(
-        controller: _tabController,
-        children: <Widget>[
-          new Newmember(),
-          new Professional(),
-          new ChatScreen(),
-          new Notifications(),
-          new Profile(),
-          
-          ],
       ),
     );
   }
