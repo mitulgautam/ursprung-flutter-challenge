@@ -18,7 +18,7 @@ class _ChatUIState extends State<ChatUI> with SingleTickerProviderStateMixin {
 
   void initState() {
     super.initState();
-    _tabController = new TabController(vsync: this, initialIndex: 1, length: 5);
+    _tabController = new TabController(vsync: this, initialIndex: 2, length: 5);
   }
 
   @override
