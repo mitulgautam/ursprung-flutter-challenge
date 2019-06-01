@@ -5,6 +5,8 @@ import 'package:farixo/pages/profile.dart';
 import 'package:flutter/material.dart';
 import 'JobHome.dart';
 
+var jobSelected = true;
+
 class ChatUI extends StatefulWidget {
   @override
   _ChatUIState createState() => _ChatUIState();
@@ -50,7 +52,7 @@ class _ChatUIState extends State<ChatUI> with SingleTickerProviderStateMixin {
             controller: _tabController,
             children: <Widget>[
               new Newmember(),
-              Job(),
+              _jub(),
               new ChatScreen(),
               new Notifications(),
               new Profile(),
@@ -59,5 +61,17 @@ class _ChatUIState extends State<ChatUI> with SingleTickerProviderStateMixin {
         ),
       ),
     );
+  }
+
+  Widget _jub() {
+    if (!jobSelected) {
+      return JobSuggestion(
+        con: context,
+      );
+    } else {
+      return Job(
+        con: context,
+      );
+    }
   }
 }

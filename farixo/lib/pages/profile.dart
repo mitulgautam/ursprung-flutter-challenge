@@ -32,12 +32,11 @@ class Profile extends StatelessWidget {
                 Text(
                   'Android Bot',
                   style: TextStyle(
-                      fontSize: 30.0,
-                      fontWeight: FontWeight.bold,
-                      ),
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 SizedBox(height: 15.0),
-                
                 Container(
                     height: 30.0,
                     width: 95.0,
@@ -51,15 +50,16 @@ class Profile extends StatelessWidget {
                         child: Center(
                           child: Text(
                             'Edit Name',
-                            style: TextStyle(color: Colors.white, fontFamily: 'Montserrat'),
+                            style: TextStyle(
+                                color: Colors.white, fontFamily: 'Montserrat'),
                           ),
                         ),
                       ),
                     )),
-                    SizedBox(height: 25.0),
+                SizedBox(height: 25.0),
                 Container(
-                    height: 30.0,
-                    width: 95.0,
+                    width: 128.0,
+                    padding: EdgeInsets.all(16.0),
                     child: Material(
                       borderRadius: BorderRadius.circular(20.0),
                       shadowColor: Colors.redAccent,
@@ -70,7 +70,10 @@ class Profile extends StatelessWidget {
                         child: Center(
                           child: Text(
                             'Log out',
-                            style: TextStyle(color: Colors.white, fontFamily: 'Montserrat'),
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Montserrat',
+                                fontSize: 24.0),
                           ),
                         ),
                       ),

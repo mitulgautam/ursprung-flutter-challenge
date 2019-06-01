@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Job extends StatefulWidget {
+  BuildContext con;
+
+  Job({@required this.con});
+
   @override
   _JobState createState() => _JobState();
 }
@@ -23,9 +27,17 @@ class _JobState extends State<Job> {
                 color: Colors.white,
                 fontSize: 16.0),
           ),
+          Container(
+            height: 16.0,
+          ),
           ListView(
+            shrinkWrap: true,
             children: <Widget>[
-              Container(width: 24.0,height: 24.0,color: Colors.white,)
+              _jobCard("Android", "Noida", Icons.work, "AEO Logic"),
+              _jobCard("Flutter", "Delhi", Icons.camera, "XYZ"),
+              _jobCard("Android", "Noida", Icons.account_balance, "ABC"),
+              _jobCard("Android", "Gurgaon", Icons.work, "FGH Ltd. Co")
+              ,_jobCard("Flutter", "Ghaziabad", Icons.work, "AEO Logic")
             ],
             scrollDirection: Axis.vertical,
           ),
@@ -34,15 +46,46 @@ class _JobState extends State<Job> {
     );
   }
 
-  Widget _jobCard(String jobTitle, String location, IconData icon) {
+  Widget _jobCard(
+      String jobTitle, String location, IconData icon, String company) {
     return Card(
+      margin: EdgeInsets.only(left: 16.0, right: 16.0,top: 16.0),
       child: Container(
-        height: 128.0,
         child: Row(
           children: <Widget>[
             Column(
-              children: <Widget>[Icon(icon,color: Colors.white,)],
+              children: <Widget>[
+                Icon(
+                  icon,
+                  color: Colors.black54,
+                  size: 64.0,
+                )
+              ],
             ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    jobTitle,
+                    style: TextStyle(
+                        fontSize: 24.0,
+                        fontFamily: 'Quicksand',
+                        fontWeight: FontWeight.bold,
+                        color: Colors.green),
+                  ),
+                  Text(company),
+                  Text(
+                    location,
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      fontFamily: 'Quicksand',
+                    ),
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),

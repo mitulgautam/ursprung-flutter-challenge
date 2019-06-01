@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
 import 'JobHome.dart';
+import 'homepage.dart';
 
 class JobSuggestion extends StatefulWidget {
+  BuildContext con;
+  JobSuggestion({@required this.con});
   @override
   _JobSuggestionState createState() => _JobSuggestionState();
 }
@@ -55,6 +58,9 @@ class _JobSuggestionState extends State<JobSuggestion> {
           MaterialButton(
             height: 48.0,
             onPressed: () {
+              setState(() {
+                jobSelected=true;
+              });
               Navigator.of(context).push(new MaterialPageRoute(
                   builder: (BuildContext context) => new Job()));
             },
