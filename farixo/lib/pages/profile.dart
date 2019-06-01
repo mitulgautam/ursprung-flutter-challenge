@@ -22,7 +22,7 @@ class Profile extends StatelessWidget {
                         color: Colors.red,
                         image: DecorationImage(
                             image: AssetImage(
-                                'assets/profile.png'),
+                                'assets/profile.jfif'),
                             fit: BoxFit.cover),
                         borderRadius: BorderRadius.all(Radius.circular(75.0)),
                         boxShadow: [
@@ -30,7 +30,7 @@ class Profile extends StatelessWidget {
                         ])),
                 SizedBox(height: 60.0),
                 Text(
-                  'Your name',
+                  'Android Bot',
                   style: TextStyle(
                       fontSize: 30.0,
                       fontWeight: FontWeight.bold,
