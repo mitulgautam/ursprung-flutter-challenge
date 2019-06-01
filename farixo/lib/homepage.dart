@@ -1,5 +1,4 @@
 import 'package:farixo/jobsuggestion.dart';
-import 'package:farixo/pages/new_member.dart';
 import 'package:farixo/pages/chat_screen.dart';
 import 'package:farixo/pages/notifications.dart';
 import 'package:farixo/pages/profile.dart';
